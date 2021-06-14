@@ -1,4 +1,4 @@
-# microsoft-vm-template
+# Microsoft-VM-template
 This is a bash script. It will help you deploy virtual machine in a friendly way even if you dont know how to.
 
 You will find `cloud shell` on the portal homepage beside the search bar
