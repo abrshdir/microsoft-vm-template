@@ -24,7 +24,7 @@ read -p "${green}Username: ${reset}" Username
 # echo "Please enter password for $Username"
 # read -sp "${green}Password: ${reset}" PASSWORD
 PASSWORD="$(openssl rand -base64 32)"
-echo "created random password ${green} $PASSWORD ${reset}"
+echo "I created random and hard to crack password for you. Please copy it.${green} $PASSWORD ${reset}"
 DNS_LABEL_PREFIX=mydeployment-$RANDOM
 echo "I created a random dns label prefix called ${green} $DNS_LABEL_PREFIX ${reset}"
 echo "${blue} Next I will validate and run a template on your local filesystem.${reset}"
@@ -36,7 +36,7 @@ az deployment group validate \
   --parameters dnsLabelPrefix=$DNS_LABEL_PREFIX
 
 echo
-echo "${blue} Validated. Now I will create a deployment. This might take a few minutes ${reset}"
+echo "${blue} Validated. Now I will create a virtual machine deployment. This might take a few minutes ${reset}"
 az deployment group create \
   --name MyDeployment \
   --resource-group $resourceGroup \
